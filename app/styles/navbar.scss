@@ -1,0 +1,73 @@
+nav {
+    height: 61px;
+    position: fixed;
+    top: 2.5rem;
+    left: 50%;
+    width: 82.5%;
+    padding: 0.5rem 1.25rem;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border: 1px solid rgba(75, 0, 150, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    backdrop-filter: blur(12.5px);
+    //transition: .175s ease;
+    //transition-delay: 0.02s;
+    &:hover {
+        border-color: rgba(75, 0, 150, 0.375);
+    }
+    .logo {
+        //  font-family: "Gelasio", serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: -0.0175em;
+    }
+    ul {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 3.5rem;
+        list-style: none;
+        li {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.015em;
+            color: rgba(255, 255, 255, 0.775);
+            cursor: pointer;
+            user-select: none;
+            transition: 0.25s ease;
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+    .demo_button {
+        width: auto;
+        color: var(--background);
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        border-radius: 14px;
+        padding: 11px 1.25rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+    }
+    .hamburger_menu {
+        color: rgb(230, 230, 230);
+        font-size: 1.75rem;
+        cursor: pointer;
+        transition: ease 0.25s;
+        &:hover {
+            color: rgb(255, 255, 255);
+        }
+    }
+}
