@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import Header from './Components/Header';
 import OurNumbers from './Components/OurNumbers';
 import Footer from './Components/Footer';
+import About from './Components/About';
 
 export default function Home() {
     useEffect(() => {
@@ -26,6 +27,8 @@ export default function Home() {
             <Header />
 
             <OurNumbers />
+
+            <About />
 
             <Footer />
             {/*   <section className='landing__hero'>

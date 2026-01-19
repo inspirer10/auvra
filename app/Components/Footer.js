@@ -1,10 +1,14 @@
 import React from 'react';
 import '../styles/footer.scss';
+import { IoLogoCapacitor } from 'react-icons/io5';
 
 function Footer() {
     return (
         <footer>
-            <h3>A.</h3>
+            <h3>
+                <IoLogoCapacitor />
+                AUVRA.
+            </h3>
             <article>
                 <div className='position'>
                     <h6>COMPANY</h6>
@@ -13,25 +17,25 @@ function Footer() {
                 </div>
 
                 <div className='position'>
-                    <p>NETWORKING</p>
+                    <p>Campaigns</p>
                     <p>HELP CENTER</p>
-                    <p>LINKEDIN</p>
+                    <p>Tik Tok</p>
                 </div>
 
                 <div className='position'>
-                    <p>SECURITY</p>
+                    <p>Viral Videos</p>
                     <p>FAQS</p>
-                    <p>FACEBOOK</p>
+                    <p>YouTube</p>
                 </div>
                 <div className='position'>
-                    <p>CONSULTING</p>
-                    <p>POLICIES</p>
+                    <p>Content Strategy</p>
+                    <p>Community Forum</p>
                     <p>INSTAGRAM</p>
                 </div>
 
                 <div className='position'>
-                    <p>TELECOMMUNICATION</p>
-                    <p></p>
+                    <p>Data Analytics</p>
+                    <p className='empty'></p>
                     <p>TWITTER</p>
                 </div>
             </article>

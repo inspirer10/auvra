@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { CgMenuRightAlt } from 'react-icons/cg';
 
 import '../styles/navbar.scss';
@@ -16,6 +16,7 @@ function Navbar() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
     return (
         <motion.nav
             animate={scrolled ? 'compact' : 'wide'}
@@ -30,32 +31,38 @@ function Navbar() {
             </Link>
             <ul>
                 <li>About</li>
-                <li>Services</li>
-                <li>Technology</li>
+                <li>Our Services</li>
+                <li>How It Works</li>
                 <li>Contact</li>
             </ul>
-            <motion.button
-                className='demo_button'
-                animate={scrolled ? 'hide' : 'show'}
-                variants={{
-                    show: { display: 'flex' },
-                    hide: { display: 'none' },
-                }}
-                transition={{ duration: 0.1, ease: 'easeInOut' }}
-            >
-                See Demo
-            </motion.button>
 
-            <motion.div
-                animate={scrolled ? 'show' : 'hide'}
-                variants={{
-                    show: { display: 'flex' },
-                    hide: { display: 'none' },
-                }}
-                transition={{ duration: 0.1, ease: 'easeInOut' }}
-            >
-                <CgMenuRightAlt className='hamburger_menu' />
-            </motion.div>
+            <div className='right_section'>
+                <AnimatePresence mode='wait'>
+                    {!scrolled ? (
+                        <motion.button
+                            key='demo-button'
+                            className='demo_button'
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0, ease: 'easeInOut' }}
+                        >
+                            See Demo
+                        </motion.button>
+                    ) : (
+                        <motion.div
+                            key='hamburger'
+                            className='hamburger_wrapper'
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0, ease: 'easeInOut' }}
+                        >
+                            <CgMenuRightAlt className='hamburger_menu' />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
         </motion.nav>
     );
 }

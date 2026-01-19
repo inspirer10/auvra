@@ -45,29 +45,39 @@ nav {
             }
         }
     }
+    .right_section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 120px;
+    }
     .demo_button {
-        width: auto;
+        font-size: 18px;
+        font-weight: 500;
         color: var(--background);
         background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(15px);
-        font-size: 18px;
-        font-weight: 500;
         border: none;
         border-radius: 14px;
         padding: 11px 1.25rem;
         cursor: pointer;
-        transition: 0.2s ease;
+        transition: background-color 0.2s ease;
         &:hover {
             background-color: rgba(0, 0, 0, 0.85);
         }
     }
-    .hamburger_menu {
-        color: rgb(230, 230, 230);
-        font-size: 1.75rem;
-        cursor: pointer;
-        transition: ease 0.25s;
-        &:hover {
-            color: rgb(255, 255, 255);
+    .hamburger_wrapper {
+        display: flex;
+        align-items: center;
+        .hamburger_menu {
+            font-size: 1.75rem;
+            color: rgb(225, 225, 225);
+            cursor: pointer;
+            transition: color 0.25s ease;
+            &:hover {
+                color: rgb(255, 255, 255);
+            }
         }
     }
 }

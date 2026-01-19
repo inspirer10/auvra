@@ -12,13 +12,13 @@ function OurNumbers() {
                     </h2>
 
                     <p className='underHeading'>
-                        Quantified impact from every showing
+                        Quantified impact from every campaign
                     </p>
                 </div>
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/stars.png'}
+                        src={'/image2.png'}
                         alt='1'
                         height={400}
                         width={400}
@@ -28,7 +28,7 @@ function OurNumbers() {
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/logo.jpg'}
+                        src={'/image3.png'}
                         alt='2'
                         height={400}
                         width={400}
@@ -39,23 +39,23 @@ function OurNumbers() {
 
             <div className='numbers'>
                 <div className='number'>
-                    <h3>250K+</h3>
-                    <p>Users Engaged</p>
+                    <h3>20K+</h3>
+                    <p>Creators Partnered</p>
                 </div>
 
                 <div className='number'>
-                    <h3>1M+</h3>
-                    <p>Data Points Collected</p>
+                    <h3>500M+</h3>
+                    <p>Video Views Generated</p>
                 </div>
 
                 <div className='number'>
-                    <h3>500+</h3>
-                    <p>Successful Deployments</p>
+                    <h3>350+</h3>
+                    <p>High-Converting Campaigns</p>
                 </div>
 
                 <div className='number'>
-                    <h3>99.9%</h3>
-                    <p>Uptime Reliability</p>
+                    <h3>3.8x</h3>
+                    <p>Average ROI Delivered</p>
                 </div>
             </div>
         </section>

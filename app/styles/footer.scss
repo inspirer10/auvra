@@ -4,7 +4,10 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
     h3 {
-        font-size: 6rem;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 2.75rem;
         font-weight: 700;
         font-style: italic;
         letter-spacing: -0.0175em;
@@ -30,12 +33,18 @@ footer {
                 color: rgb(255, 255, 255);
             }
             p {
+                text-transform: uppercase;
                 font-family: "SUSE", sans-serif;
                 font-weight: 400;
-                color: rgb(150, 150, 150);
+                color: rgb(130, 130, 130);
                 cursor: pointer;
                 transition: .15s ease;
                 transition-delay: 0.02s;
+                &.empty {
+                    cursor: default;
+                    pointer-events: none;
+                    color: transparent;
+                }
                 &:hover {
                     color: rgb(225, 225, 225);
                 }
