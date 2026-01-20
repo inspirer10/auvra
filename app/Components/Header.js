@@ -31,9 +31,9 @@ function Header() {
                 <Image
                     className='image'
                     src='/image.png'
-                    height={700}
-                    width={1200}
-                    quality={90}
+                    height={800}
+                    width={1500}
+                    quality={100}
                     alt='Fractal image'
                     priority
                 />

@@ -20,9 +20,9 @@ function OurNumbers() {
                     <Image
                         src={'/image2.png'}
                         alt='1'
-                        height={400}
-                        width={400}
-                        quality={90}
+                        height={450}
+                        width={450}
+                        quality={100}
                     />
                 </div>
 
@@ -30,9 +30,9 @@ function OurNumbers() {
                     <Image
                         src={'/image3.png'}
                         alt='2'
-                        height={400}
-                        width={400}
-                        quality={90}
+                        height={450}
+                        width={450}
+                        quality={100}
                     />
                 </div>
             </div>

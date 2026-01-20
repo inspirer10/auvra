@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import OurNumbers from './Components/OurNumbers';
 import Footer from './Components/Footer';
 import About from './Components/About';
+import OurServices from './Components/OurServices';
 
 export default function Home() {
     useEffect(() => {
@@ -30,6 +31,8 @@ export default function Home() {
 
             <About />
 
+            <OurServices />
+
             <Footer />
             {/*   <section className='landing__hero'>
                     <motion.div
@@ -51,32 +54,6 @@ export default function Home() {
                         />
                     </motion.div>
                 </section> */}
-
-            <article className='landing__text'>
-                <h1>Some landing page text</h1>
-                <p>
-                    Tu wrzuć swój content, żeby wymusić scroll i zobaczyć
-                    animacje w akcji.
-                </p>
-
-                <h1>Some landing page text</h1>
-                <p>
-                    Tu wrzuć swój content, żeby wymusić scroll i zobaczyć
-                    animacje w akcji.
-                </p>
-
-                <h1>Some landing page text</h1>
-                <p>
-                    Tu wrzuć swój content, żeby wymusić scroll i zobaczyć
-                    animacje w akcji.
-                </p>
-
-                <h1>Some landing page text</h1>
-                <p>
-                    Tu wrzuć swój content, żeby wymusić scroll i zobaczyć
-                    animacje w akcji.
-                </p>
-            </article>
         </>
     );
 }

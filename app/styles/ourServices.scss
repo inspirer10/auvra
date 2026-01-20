@@ -1,0 +1,152 @@
+.ourServices_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15vh auto;
+    .overHeading {
+        position: relative;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+        margin-bottom: 1.25rem;
+        background-color: var(--background);
+        color: var(--foreground);
+        padding: 0.625rem 0.875rem;
+        border-radius: 50px;
+        &::before {
+            content: '<';
+            position: absolute;
+            border-radius: 50px;
+            aspect-ratio: 1/1;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-50%);
+            width: auto;
+            height: calc(100% - 2px);
+            background-color: var(--foreground);
+            color: var(--background);
+        }
+    }
+    h2 {
+        font-family: "SUSE", sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.1;
+        span {
+            background: -webkit-linear-gradient(rgb(128, 0, 255), rgb(35, 35, 35));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .subHeading {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(125, 125, 125);
+        line-height: 1.35;
+        letter-spacing: -0.015em;
+        margin-top: 0.75rem;
+        text-align: center;
+        width: 45%;
+        text-wrap: balance;
+    }
+    button {
+        margin-top: 2.25rem;
+        font-family: "Inter", sans-serif;
+        color: var(--foreground);
+        background-color: var(--background);
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        border: 2px solid rgba(255, 255, 255, 0.75);
+        border-radius: 50px;
+        padding: 0.875rem 2.25rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+        transition-delay: 0.02s;
+        &:hover {
+            background-color: var(--foreground);
+            color: var(--background);
+        }
+        &:active {
+            transition: 0.125s ease;
+            transform: scale(0.975);
+            border-color: rgb(128, 0, 255);
+        }
+    }
+    article {
+        width: 100%;
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5%;
+        .image_wrapper {
+            width: 33.333%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.5rem;
+                border-radius: 50px;
+                color: #000;
+                color: #fff;
+                padding: 0.75rem;
+                background-color: rgba(255, 255, 255, 0.35);
+                backdrop-filter: blur(4px);
+                cursor: pointer;
+                transition: 0.25s ease;
+                transition-delay: 0.02s;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    backdrop-filter: blur(5 px);
+                    color: #000;
+                    transform: translate(-50%, -50%) scale(1.08);
+                }
+                &:active {
+                    transition: 0.1s ease;
+                    color: rgb(100, 0, 200);
+                    backdrop-filter: blur(2.5px);
+                    transform: translate(-50%, -50%) scale(0.97);
+                }
+            }
+            &:hover {
+                img {
+                    transform: scale(1.02);
+                }
+            }
+            img {
+                will-change: transform;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 2/1.2;
+                border-radius: 16px;
+                transition: 0.3s ease;
+                transition-delay: 0.025s;
+            }
+        }
+    }
+}
