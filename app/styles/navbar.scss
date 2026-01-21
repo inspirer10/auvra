@@ -7,7 +7,7 @@ nav {
     padding: 0.5rem 1.25rem;
     transform: translateX(-50%);
     z-index: 9999;
-    border: 1px solid rgba(75, 0, 150, 0.25);
+    border: 1px solid rgba(128, 0, 255, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,9 @@ nav {
     //transition: .175s ease;
     //transition-delay: 0.02s;
     &:hover {
-        border-color: rgba(75, 0, 150, 0.375);
+        border-color: rgba(128, 0, 255, 0.35);
+        transition: .175s ease;
+        transition-delay: 0.02s;
     }
     .logo {
         //  font-family: "Gelasio", serif;
@@ -24,6 +26,7 @@ nav {
         font-weight: 700;
         font-style: italic;
         letter-spacing: -0.0175em;
+        cursor: pointer;
     }
     ul {
         position: absolute;
@@ -32,7 +35,7 @@ nav {
         display: flex;
         gap: 3.5rem;
         list-style: none;
-        li {
+        a {
             font-family: "Inter", sans-serif;
             font-size: 1rem;
             font-weight: 500;
@@ -58,6 +61,7 @@ nav {
         font-weight: 500;
         color: var(--background);
         background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgb(65, 0, 130);
         backdrop-filter: blur(15px);
         border: none;
         border-radius: 14px;
@@ -131,7 +135,7 @@ nav {
         justify-content: center;
         gap: 3.25rem;
         list-style: none;
-        li {
+        a {
             font-family: "SUSE", sans-serif;
             text-transform: uppercase;
             font-size: 1.75rem;

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function OurNumbers() {
     return (
-        <section className='ourNumbers' id='#number'>
+        <section className='ourNumbers' id='numbers'>
             <div className='header'>
                 <div className='info'>
                     <h2>

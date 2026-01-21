@@ -28,6 +28,14 @@ function Navbar() {
         setOpenMenu(false);
     };
 
+    const handleSectionRouting = (e, section) => {
+        e.preventDefault();
+
+        document
+            .getElementById(`${section}`)
+            ?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
             <motion.nav
@@ -38,9 +46,15 @@ function Navbar() {
                 }}
                 transition={{ duration: 0.65, ease: 'easeInOut' }}
             >
-                <Link href='/' className='logo'>
+                <p
+                    href='/'
+                    className='logo'
+                    onClick={() =>
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }
+                >
                     AUVRA.
-                </Link>
+                </p>
 
                 <motion.ul
                     animate={scrolled ? 'hidden' : 'visible'}
@@ -50,11 +64,37 @@ function Navbar() {
                     }}
                     transition={{ duration: 0.1, ease: 'easeInOut' }}
                 >
-                    <li>About</li>
-                    <li>Our Services</li>
-                    <li>How It Works</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
+                    <a
+                        href='#about'
+                        onClick={(e) => handleSectionRouting(e, 'about')}
+                    >
+                        About
+                    </a>
+                    <a
+                        href='#services'
+                        onClick={(e) => handleSectionRouting(e, 'services')}
+                    >
+                        Our Services
+                    </a>
+                    <a
+                        href='#howItWorks'
+                        onClick={(e) => handleSectionRouting(e, 'howItWorks')}
+                    >
+                        How It Works
+                    </a>
+
+                    <a
+                        href='#pricing'
+                        onClick={(e) => handleSectionRouting(e, 'pricing')}
+                    >
+                        Pricing
+                    </a>
+                    <a
+                        href='#faq'
+                        onClick={(e) => handleSectionRouting(e, 'faq')}
+                    >
+                        FAQ
+                    </a>
                 </motion.ul>
 
                 {!openMenu && (
@@ -99,12 +139,53 @@ function Navbar() {
                 <span className='close-btn' onClick={handleCloseSideMenu}>
                     <IoMdClose />
                 </span>
+
                 <ul>
-                    <li>About</li>
-                    <li>Our Services</li>
-                    <li>How It Works</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
+                    <a
+                        href='#about'
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'about');
+                            handleCloseSideMenu();
+                        }}
+                    >
+                        About
+                    </a>
+                    <a
+                        href='#services'
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'services');
+                            handleCloseSideMenu();
+                        }}
+                    >
+                        Our Services
+                    </a>
+                    <a
+                        href='#howItWorks'
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'howItWorks');
+                            handleCloseSideMenu();
+                        }}
+                    >
+                        How It Works
+                    </a>
+                    <a
+                        href='#faq'
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'faq');
+                            handleCloseSideMenu();
+                        }}
+                    >
+                        FAQ
+                    </a>
+                    <a
+                        href='#contact'
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'contact');
+                            handleCloseSideMenu();
+                        }}
+                    >
+                        Contact
+                    </a>
                 </ul>
 
                 <h6>AUVRA.</h6>

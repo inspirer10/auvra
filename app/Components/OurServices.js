@@ -6,7 +6,7 @@ import { FiEye } from 'react-icons/fi';
 
 function OurServices() {
     return (
-        <section className='ourServices_section'>
+        <section className='ourServices_section' id='services'>
             <div className='overHeading'>
                 <p>Create</p>
                 <p>Bond</p>

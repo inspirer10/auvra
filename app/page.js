@@ -8,6 +8,7 @@ import OurNumbers from './Components/OurNumbers';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import OurServices from './Components/OurServices';
+import Pricing from './Components/Pricing';
 
 export default function Home() {
     useEffect(() => {
@@ -32,6 +33,8 @@ export default function Home() {
             <About />
 
             <OurServices />
+
+            <Pricing />
 
             <Footer />
             {/*   <section className='landing__hero'>

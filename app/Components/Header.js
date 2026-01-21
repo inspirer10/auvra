@@ -20,7 +20,7 @@ function Header() {
     );
 
     return (
-        <header ref={container}>
+        <header ref={container} id='#top'>
             <motion.div
                 className='image-wrapper'
                 style={{

@@ -4,7 +4,7 @@ import '../styles/about.scss';
 
 function About() {
     return (
-        <section className='about_section'>
+        <section className='about_section' id='about'>
             <article>
                 <h6 className='logo'>AUVRA.</h6>
                 <p>

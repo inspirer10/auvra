@@ -1,7 +1,7 @@
 .ourNumbers {
     display: flex;
     padding: 7.5vh 0;
-    margin: 20vh 3.75% 17.5vh;
+    margin: 20vh 3.75% 12.5vh;
     flex-direction: column;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     .header {
@@ -81,7 +81,7 @@
                 border-color: rgba(255, 255, 255, 0.9);
                 transform: translateY(-2px);
                 h3 {
-                    color: rgb(100, 0, 200);
+                    color: rgb(128, 0, 255);
                 }
                 p {
                     color: rgb(220, 220, 220);
