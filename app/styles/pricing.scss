@@ -71,6 +71,8 @@
             gap: 0.5rem;
             li {
                 font-family: "Inter", sans-serif;
+                font-weight: 500;
+                letter-spacing: -0.01em;
                 color: rgb(175, 175, 175);
                 //background-color: rgba(29, 0, 52, 0.15);
                 border-radius: 12px;
@@ -78,11 +80,12 @@
                 padding-right: 1.75rem;
                 cursor: pointer;
                 &:hover {
-                    transition: .15s ease;
+                    transition: .125s ease;
                     color: rgb(225, 225, 225);
                     background-color: rgba(29, 0, 52, 0.4);
                 }
                 &.active {
+                    transition: .15s ease;
                     color: rgb(128, 0, 255);
                     background-color: rgba(29, 0, 52, 0.7);
                     position: relative;
@@ -102,6 +105,10 @@
         }
         .cards_container {
             margin-top: 2.5rem;
+            //padding: 1rem;
+            //background-color: rgb(16, 16, 16);
+            //border-radius: 30px;
+            padding-bottom: 2.5rem;
             .cards_wrapper {
                 display: flex;
                 flex-direction: row;
@@ -112,7 +119,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    padding: 2.5rem;
+                    padding: 2.25rem 2.5rem;
                     width: 45%;
                     height: auto;
                     aspect-ratio: 2/1;
@@ -123,19 +130,20 @@
                         background: linear-gradient(55deg, #03001e, #7303c0, #ec38bc, #fdeff9);
                     }
                     .icon {
-                        font-size: 2.5rem;
+                        font-size: 3rem;
                     }
                     p {
-                        font-family: 'Inter', sans-serif;
-                        font-size: 1.5rem;
-                        font-weight: 300;
+                        font-size: 1.75rem;
+                        font-weight: 500;
                         letter-spacing: -0.02em;
+                        word-spacing: 0.025em;
                     }
                     h5 {
                         font-family: 'Inter', sans-serif;
-                        font-size: 1.75rem;
-                        font-weight: 500;
-                        letter-spacing: -0.0075em;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        letter-spacing: -0.01em;
+                        margin-top: 0.75rem;
                     }
                     button {
                         width: fit-content;
@@ -152,10 +160,9 @@
                         transition: 0.225s ease;
                         transition-delay: 0.025s;
                         &:hover {
-                            background-color: rgba(0, 0, 0, 0.725);
+                            background-color: rgba(255, 255, 255, 0.15);
                             color: white;
-                            //background-color: rgba(255, 255, 255, 0.325);
-                            backdrop-filter: blur(15px);
+                            backdrop-filter: blur(10px);
                         }
                         &:active {
                             transition: .1s ease;
@@ -165,13 +172,44 @@
                 }
             }
             .details_wrapper {
+                margin-top: 2rem;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: space-between;
                 ul {
-                    list-style: none;
-                    li {}
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: center;
+                    gap: 18px;
+                    width: 45%;
+                    padding-left: 0.75rem;
+                    li {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 20px;
+                        color: rgb(185, 185, 185);
+                        letter-spacing: -0.015em;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: 0.75rem;
+                        transition: .2s ease;
+                        transition-delay: 0.02s;
+                        cursor: pointer;
+                        .icon {
+                            font-size: 22px;
+                            transition: .2s ease;
+                            transition-delay: 0.02s;
+                        }
+                        &:hover {
+                            color: #fff;
+                            transform: translateX(3px);
+                            .icon {
+                                color: rgb(128, 0, 255);
+                            }
+                        }
+                    }
                 }
             }
         }

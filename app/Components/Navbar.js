@@ -66,32 +66,46 @@ function Navbar() {
                 >
                     <a
                         href='#about'
-                        onClick={(e) => handleSectionRouting(e, 'about')}
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'about');
+                            handleCloseSideMenu();
+                        }}
                     >
                         About
                     </a>
                     <a
                         href='#services'
-                        onClick={(e) => handleSectionRouting(e, 'services')}
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'services');
+                            handleCloseSideMenu();
+                        }}
                     >
                         Our Services
                     </a>
                     <a
                         href='#howItWorks'
-                        onClick={(e) => handleSectionRouting(e, 'howItWorks')}
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'howItWorks');
+                            handleCloseSideMenu();
+                        }}
                     >
                         How It Works
                     </a>
-
                     <a
                         href='#pricing'
-                        onClick={(e) => handleSectionRouting(e, 'pricing')}
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'pricing');
+                            handleCloseSideMenu();
+                        }}
                     >
                         Pricing
                     </a>
                     <a
                         href='#faq'
-                        onClick={(e) => handleSectionRouting(e, 'faq')}
+                        onClick={(e) => {
+                            handleSectionRouting(e, 'faq');
+                            handleCloseSideMenu();
+                        }}
                     >
                         FAQ
                     </a>
@@ -169,22 +183,16 @@ function Navbar() {
                         How It Works
                     </a>
                     <a
-                        href='#faq'
-                        onClick={(e) => {
-                            handleSectionRouting(e, 'faq');
-                            handleCloseSideMenu();
-                        }}
+                        href='#pricing'
+                        onClick={(e) => handleSectionRouting(e, 'pricing')}
                     >
-                        FAQ
+                        Pricing
                     </a>
                     <a
-                        href='#contact'
-                        onClick={(e) => {
-                            handleSectionRouting(e, 'contact');
-                            handleCloseSideMenu();
-                        }}
+                        href='#faq'
+                        onClick={(e) => handleSectionRouting(e, 'faq')}
                     >
-                        Contact
+                        FAQ
                     </a>
                 </ul>
 

@@ -25,7 +25,7 @@ function OurServices() {
             <article>
                 <div className='image_wrapper'>
                     <Image
-                        src={'/place1.jpg'}
+                        src={'/video1.jpg'}
                         alt='Service 1'
                         height={500}
                         width={600}
@@ -39,7 +39,7 @@ function OurServices() {
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/place2.jpg'}
+                        src={'/video2.jpg'}
                         alt='Service 1'
                         height={500}
                         width={600}
@@ -53,7 +53,7 @@ function OurServices() {
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/place3.jpg'}
+                        src={'/video3.jpg'}
                         alt='Service 1'
                         height={500}
                         width={600}

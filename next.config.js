@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-        qualities: [90],
+        qualities: [90, 100],
     },
 };

@@ -18,21 +18,22 @@ function OurNumbers() {
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/image2.png'}
+                        src={'/texture1.jpg'}
                         alt='1'
                         height={450}
                         width={450}
-                        quality={100}
+                        quality={90}
                     />
                 </div>
 
                 <div className='image_wrapper'>
                     <Image
-                        src={'/image3.png'}
+                        //src={'/image3.png'}
+                        src={'/texture6.jpg'}
                         alt='2'
                         height={450}
                         width={450}
-                        quality={100}
+                        quality={90}
                     />
                 </div>
             </div>
