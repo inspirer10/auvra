@@ -9,6 +9,7 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import OurServices from './Components/OurServices';
 import Pricing from './Components/Pricing';
+import FAQ from './Components/FAQ';
 
 export default function Home() {
     useEffect(() => {
@@ -35,6 +36,8 @@ export default function Home() {
             <OurServices />
 
             <Pricing />
+
+            <FAQ />
 
             <Footer />
             {/*   <section className='landing__hero'>
