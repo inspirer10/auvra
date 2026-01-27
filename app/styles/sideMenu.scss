@@ -1,0 +1,98 @@
+.side-menu {
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 450px;
+    background-color: #1a1a1a;
+    backdrop-filter: blur(12.5px);
+    padding: 5rem 0 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    .close-btn {
+        position: absolute;
+        top: 1.75rem;
+        right: 1.75rem;
+        font-size: 2.5rem;
+        color: rgb(255, 255, 255);
+        border-radius: 50px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.225s ease, color 0.225s ease;
+        &:hover {
+            background-color: var(--background, rgba(255, 255, 255, 0.1));
+            color: var(--foreground, rgb(255, 255, 255));
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+    .menu-nav {
+        width: 100%;
+    }
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3.25rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .menu-link {
+            position: relative;
+            font-family: 'SUSE', sans-serif;
+            text-transform: uppercase;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 0.015em;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: color 0.175s ease, transform 0.175s ease;
+            .menu-number {
+                position: absolute;
+                top: 0.5rem;
+                right: -2.5rem;
+                transform: translate(-50%, -50%);
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: rgb(128, 0, 255);
+            }
+            &:hover {
+                color: rgb(135, 135, 135);
+                transform: translateX(5px);
+            }
+        }
+    }
+    .menu-footer {
+        position: absolute;
+        bottom: 2.5%;
+        left: 50%;
+        transform: translateX(-50%) !important;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: -0.0175em;
+        color: rgba(225, 225, 225, 0.5);
+        cursor: pointer;
+        margin: 0;
+        &:hover {
+            transition: color 0.15s ease;
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+}

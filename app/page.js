@@ -10,6 +10,7 @@ import About from './Components/About';
 import OurServices from './Components/OurServices';
 import Pricing from './Components/Pricing';
 import FAQ from './Components/FAQ';
+import ScrollTextReveal from './Components/ScrollText';
 
 export default function Home() {
     useEffect(() => {
@@ -34,6 +35,8 @@ export default function Home() {
             <About />
 
             <OurServices />
+
+            <ScrollTextReveal />
 
             <Pricing />
 

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { IoMdClose } from 'react-icons/io';
 
 import '../styles/navbar.scss';
+import SideMenu from './SideMenu';
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -19,14 +19,8 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleOpenSideMenu = () => {
-        //document.body.classList.add('opened');
-        setOpenMenu(true);
-    };
-
-    const handleCloseSideMenu = () => {
-        setOpenMenu(false);
-    };
+    const handleOpenSideMenu = () => setOpenMenu(true);
+    const handleCloseSideMenu = () => setOpenMenu(false);
 
     const handleSectionRouting = (e, section) => {
         e.preventDefault();
@@ -136,46 +130,11 @@ function Navbar() {
                 )}
             </motion.nav>
 
-            <div className={`${openMenu ? 'open sideMenu' : 'sideMenu'}`}>
-                <span className='close-btn' onClick={handleCloseSideMenu}>
-                    <IoMdClose />
-                </span>
-
-                <ul>
-                    <a
-                        href='#about'
-                        onClick={(e) => handleSectionRouting(e, 'about')}
-                    >
-                        About
-                    </a>
-                    <a
-                        href='#services'
-                        onClick={(e) => handleSectionRouting(e, 'services')}
-                    >
-                        Our Services
-                    </a>
-                    <a
-                        href='#howItWorks'
-                        onClick={(e) => handleSectionRouting(e, 'howItWorks')}
-                    >
-                        How It Works
-                    </a>
-                    <a
-                        href='#pricing'
-                        onClick={(e) => handleSectionRouting(e, 'pricing')}
-                    >
-                        Pricing
-                    </a>
-                    <a
-                        href='#faq'
-                        onClick={(e) => handleSectionRouting(e, 'faq')}
-                    >
-                        FAQ
-                    </a>
-                </ul>
-
-                <h6>AUVRA.</h6>
-            </div>
+            <SideMenu
+                isOpen={openMenu}
+                onClose={handleCloseSideMenu}
+                onNavigate={(sectionId) => handleSectionRouting(sectionId)}
+            />
         </>
     );
 }

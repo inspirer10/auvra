@@ -36,16 +36,38 @@ nav {
         gap: 3.5rem;
         list-style: none;
         a {
+            line-height: 1;
+            padding: 2px;
             font-family: "Inter", sans-serif;
             font-size: 1rem;
             font-weight: 500;
             color: rgba(255, 255, 255, 0.75);
+            will-change: transform;
+            position: relative;
             text-wrap: nowrap;
             cursor: pointer;
             user-select: none;
-            transition: 0.25s ease;
+            transition: 0.2s ease;
             &:hover {
-                color: rgba(255, 255, 255, 1);
+                transition: 0.275s ease;
+                color: rgb(255, 255, 255);
+                transform: translateY(-2px);
+                &::after {
+                    transition: 0.275s ease;
+                    transform: scaleX(1);
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -3px;
+                transform: scaleX(0);
+                background: rgb(255, 255, 255);
+                height: 2px;
+                //transform-origin: center;
+                transition: 0.2s ease;
             }
         }
     }
@@ -66,6 +88,8 @@ nav {
         border: none;
         border-radius: 14px;
         padding: 11px 1.25rem;
+        box-shadow: 0 1px 10px rgba(65, 0, 130, .25);
+        outline: 3px solid rgba(65, 0, 130, .35);
         cursor: pointer;
         transition: background-color 0.2s ease;
         &:hover {
@@ -87,6 +111,8 @@ nav {
     }
 }
 
+
+/*
 .sideMenu {
     height: 100vh;
     width: 450px;
@@ -170,4 +196,4 @@ nav {
             color: rgba(255, 255, 255, 0.75);
         }
     }
-}
+}*/
